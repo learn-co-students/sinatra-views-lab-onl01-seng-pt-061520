@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Date</title>
+  </head>
+  <body>
+    <h1><%= "Today" %></h1>
+    <% date = Time.new 
+
+       month = case date.month
+        when 1
+          "January"
+        when 2
+          "February"
+        when 3
+          "March"
+        when 4
+          "April"
+        when 5
+          "May"
+        when 6
+          "June"
+        when 7
+          "July"
+        when 8
+          "August"
+        when 9
+          "September"
+        when 10
+          "October"
+        when 11
+          "November"
+        when 12
+          "December"
+        end
+
+        day_of_the_week = case date.wday
+        when 0
+          "Sunday"
+        when 1
+          "Monday"
+        when 2
+          "Tuesday"
+        when 3
+          "Wednesday"
+        when 4
+          "Thursday"
+        when 5
+          "Friday"
+        when 6
+          "Saturday"
+        end
+      %>
+    <p><%= 
+      "The date is #{day_of_the_week}, #{month} #{date.day}, #{date.year}"
+    %></p>
+  </body>
+</html>
